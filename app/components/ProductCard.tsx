@@ -81,7 +81,10 @@ export function ProductCard({ product }: { product: Product }) {
 
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold">${product.price}</span>
-          <QuantitySelector />
+          <QuantitySelector 
+            quantity={quantity}
+            onQuantityChange={setQuantity}
+          />
         </div>
 
         <Button className="w-full bg-[#6366F1] hover:bg-[#5558DD] text-white" onClick={handleAddToCart}>Add to cart</Button>
